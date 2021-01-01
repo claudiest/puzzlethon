@@ -1,3 +1,5 @@
+import helper
+
 def read_puzzle():
     '''
     Reads in file from puzzle.txt
@@ -7,14 +9,6 @@ def read_puzzle():
 
     # clean up newlines just in case
     return s.replace('\n', '')
-
-def write_line_to_file(line):
-    '''
-    Writes out any line to scratchpad.txt
-    '''
-    with open('scratchpad.txt', 'a') as fd:
-        # Add two newline characters for clarity
-        fd.write(line + '\n' + '\n')
 
 def char_shift(char, shift):
     '''

@@ -1,3 +1,4 @@
+import helper
 import random
 
 def random_character():
@@ -16,12 +17,6 @@ def read_puzzle():
 
     # clean up newlines just in case
     return s.replace('\n', '')
-
-def print_puzzle_stats(puzzletext):
-    '''
-    Gives you some observations on the puzzle that you may find useful!
-    '''
-    print("Length : {}".format(len(puzzletext)))
 
 def encrypt(message, diameter):
     '''

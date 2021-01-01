@@ -10,8 +10,8 @@ def read_puzzle():
 
 def add_chars(char1, char2):
     '''
-    Shifts the character RIGHT by shift amount.
-    e.g. char_shift('A', 1) --> 'B'
+    Shifts the first character right by the second character
+    e.g. add_chars('A', 'B') = 'A' + 'B' --> 'C' 
     '''    
     # convert characters to integers
     c1 = ord(char1) - 65
@@ -36,4 +36,9 @@ def solve():
 
     # Your Code Here! #
     plaintext = ''
-    
+
+
+    return plaintext
+
+if __name__ == '__main__':
+    print(solve())
