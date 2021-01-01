@@ -1,6 +1,6 @@
 import helper
 
-
-read_puzzle()
+c = helper.read_puzzle()
+print(c)
 
 
