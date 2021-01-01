@@ -1,4 +1,23 @@
+import random
 
+m = 'HELLOWORLD'
+
+def random_character():
+    '''
+    Returns a random uppercase character
+    '''
+    r = random.randint(0, 25)
+    return (chr(r + 65))
+
+def read_puzzle():
+    '''
+    Reads in file from puzzle.txt
+    '''
+    with open('puzzle.txt', 'r') as fd:
+        s = fd.read()
+
+    # clean up newlines just in case
+    return s.replace('\n', '')
 
 def print_puzzle_stats(puzzletext):
     '''
@@ -7,11 +26,31 @@ def print_puzzle_stats(puzzletext):
     print("Length : {}".format(len(puzzletext)))
 
 def encrypt(message, diameter):
-    pass
+    '''
+    Encryption algorithm, hope this helps. 
+    You can also see PUZZLEREADME.md for an explanation!
+    '''
+    ciphertext = ''
+    mi = 0
+    for i in range(len(message) * diameter):
+        if i % diameter == 0:
+            ciphertext += message[mi]
+            mi += 1
+        else:
+            ciphertext += random_character()
+
+    return ciphertext
+
+
 
 def solve():
-    pass
+    ciphertext = read_puzzle()
 
+
+    plaintext = ''
+
+
+    return plaintext
 
 
 if __name__ == '__main__':
