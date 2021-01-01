@@ -1,10 +1,13 @@
-def read_puzzle():
+def score_english(puzzletext):
     '''
-    Reads in file from puzzle.txt
+    This may take an extra second on older machines
     '''
-    with open('puzzle.txt', 'r') as fd:
-        s = fd.read()
+    count = 0
+    length = len(puzzletext)
+    with open('../dictionary/dictionary.txt') as fd:
+        for line in fd:
+            word = line.strip()
+            count += puzzletext.count(word)
 
-    # clean up newlines just in case
-    return s.replace('\n', '')
+    return (count / length)
 
