@@ -1,7 +1,3 @@
-m = 'Cowards die many times before their deaths The valiant never taste of death but once Of all the wonders that I yet have heard It seems to me most strange that men should fear Seeing that death a necessary end Will come when it will come.'
-m = m.upper().replace(' ','')
-
-
 def read_puzzle():
     '''
     Reads in file from puzzle.txt
@@ -17,7 +13,8 @@ def write_line_to_file(line):
     Writes out any line to scratchpad.txt
     '''
     with open('scratchpad.txt', 'a') as fd:
-        fd.write(line)
+        # Add two newline characters for clarity
+        fd.write(line + '\n' + '\n')
 
 def char_shift(char, shift):
     '''
