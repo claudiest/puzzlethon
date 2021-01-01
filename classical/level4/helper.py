@@ -1,4 +1,4 @@
-def score_english(puzzletext):
+def score_english(puzzletext, print_score=False):
     '''
     This may take an extra second on older machines
     '''
@@ -8,6 +8,8 @@ def score_english(puzzletext):
         for line in fd:
             word = line.strip()
             count += puzzletext.count(word)
-
+    
+    if print_score == True:
+        print("Hello")
     return (count / length)
 

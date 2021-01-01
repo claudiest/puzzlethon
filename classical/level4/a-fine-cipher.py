@@ -30,7 +30,14 @@ def solve():
     ciphertext = read_puzzle()
 
 
+    plaintext = ''
     # Some helper functions you may find useful!
+    x = helper.score_english(ciphertext, True)
 
+
+    return plaintext
+
+if __name__ == '__main__':
+    print(solve())
 
 
