@@ -7,3 +7,4 @@ def read_puzzle():
 
     # clean up newlines just in case
     return s.replace('\n', '')
+

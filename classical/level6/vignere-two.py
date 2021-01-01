@@ -8,14 +8,16 @@ def read_puzzle():
     # clean up newlines just in case
     return s.replace('\n', '')
 
-def char_shift(char, shift):
+def add_chars(char1, char2):
     '''
     Shifts the character RIGHT by shift amount.
     e.g. char_shift('A', 1) --> 'B'
     '''    
-    # Re-index char (unicode)
-    index = ((ord(char) - 65) + shift) % 26
-    return (chr(index+65))
+    # convert characters to integers
+    c1 = ord(char1) - 65
+    c2 = ord(char2) - 65
+    r = c1 + c2 % 26
+    return (chr(r+65))
 
 def encrypt(message, key):
     
@@ -25,3 +27,6 @@ def encrypt(message, key):
     for character in message:
         ciphertext += char_shift(character, key[ki])
         ki = (ki + 1) % keylength
+    
+    return ciphertext
+
