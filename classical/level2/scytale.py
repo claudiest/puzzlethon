@@ -1,7 +1,5 @@
 import random
 
-m = 'HELLOWORLD'
-
 def random_character():
     '''
     Returns a random uppercase character
@@ -46,8 +44,9 @@ def encrypt(message, diameter):
 def solve():
     ciphertext = read_puzzle()
 
-
+    print_puzzle_stats(ciphertext)
     plaintext = ''
+
 
 
     return plaintext
