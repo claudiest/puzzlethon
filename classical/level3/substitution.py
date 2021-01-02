@@ -1,4 +1,4 @@
-import helper
+import tools.helper as helper
 def read_puzzle():
     '''
     Reads in file from puzzle.txt
