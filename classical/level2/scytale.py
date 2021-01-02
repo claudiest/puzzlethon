@@ -1,4 +1,4 @@
-import helper
+import tools.helper as helper
 import random
 
 def random_character():
