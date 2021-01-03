@@ -14,14 +14,16 @@ def read_puzzle():
 def encrypt(message, substitution_table):
     '''
     Encrypts a message according to the substitution table you give it.
-    If the substitution table isn't complete, don't change the character
+    If the substitution table doesn't have an entry for a character, character is unchanged
     '''
     ciphertext = ''
     for character in message:
-        try:
+        if character in substitution_table:
             ciphertext += substitution_table[character]
-        except KeyError:
+        else:
             ciphertext += character
+
+    return ciphertext
 
 def solve():
     ciphertext = read_puzzle()
@@ -40,4 +42,4 @@ def solve():
     
 
 if __name__ == '__main__':
-    solve()
+    print(solve())
