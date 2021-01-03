@@ -19,27 +19,36 @@ def read_puzzle():
     return s.replace('\n', '')
 
 def encrypt(message, diameter):
-    '''
-    Encryption algorithm, hope this helps. 
-    You can also see PUZZLEREADME.md for an explanation!
-    '''
+    plaintext = message
     ciphertext = ''
+
+    # Pad the message so it is the right length to be wrapped perfectly around the "rod"
+    while len(plaintext) % diameter != 0:
+        plaintext += random_character()
+    
+    # Create the "rod"
+    row_length = len(plaintext) // diameter
+    rod_rows = [' '] * diameter
+
+    # Write the message aross the rod's rows
     mi = 0
-    for i in range(len(message) * diameter):
-        if i % diameter == 0:
-            ciphertext += message[mi]
-            mi += 1
-        else:
-            ciphertext += random_character()
+    for i in range(0, diameter):
+        rod_rows[i] = plaintext[mi:mi+row_length]
+        mi += row_length
+    
+    # Create the ciphertext by reading the message vertically from the rows
+    for i in range(0, row_length):
+        for j in range(0, diameter):
+            ciphertext += rod_rows[j][i]
+        
 
     return ciphertext
-
 
 
 def solve():
     ciphertext = read_puzzle()
 
-    print_puzzle_stats(ciphertext)
+    helper.print_puzzle_stats(ciphertext)
     plaintext = ''
 
 
