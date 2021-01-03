@@ -32,7 +32,7 @@ def solve():
     helper.print_puzzle_stats(ciphertext)
     substitution_table = helper.SubstitutionTable()
     # You can add a pair of letters into the table like this
-    substitution_table.add_pair('A', 'B')
+    substitution_table.print_table()
 
     plaintext = ''
 

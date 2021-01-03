@@ -1,9 +1,16 @@
+
 class SubstitutionTable(dict):
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     def __init__(self, *args, **kwargs):
         super(SubstitutionTable, self).__init__(*args, **kwargs)
         self.__dict__ = self
+        self.reset_table()
 
+    def reset_table(self):
+        for letter in self.alphabet:
+            self.__dict__ [letter] = letter 
+        
     def add_pair(self, p1, p2):
         p1,p2 = p1.upper(), p2.upper()
 
@@ -28,7 +35,7 @@ class SubstitutionTable(dict):
         '''
         print ("Substitution Table")
         print ("---")
-        for key in self.__dict__.keys():
+        for key in list(self.__dict__.keys()):
             print("{} --> {}".format(key, self.__dict__[key]))
 
 
@@ -57,3 +64,5 @@ def print_puzzle_stats(puzzletext):
 
     for key in freq_dict.keys():
         print("{} : {}".format(key, freq_dict[key]))
+    
+    print ("\n")
