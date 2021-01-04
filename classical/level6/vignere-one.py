@@ -11,7 +11,7 @@ def read_puzzle():
 def add_chars(char1, char2):
     '''
     Shifts the first character right by the second character
-    e.g. add_chars('A', 'B') = 'A' + 'B' --> 'C' 
+    e.g. add_chars('A', 'B') = 'A' + 'B' = 0 + 1 = 1--> 'B' 
     '''    
     # convert characters to integers
     c1 = ord(char1) - 65
