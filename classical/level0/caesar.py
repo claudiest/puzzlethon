@@ -13,6 +13,11 @@ def char_shift(char, shift):
     Shifts the character RIGHT by shift amount.
     e.g. char_shift('A', 1) --> 'B'
     '''
+
+    if shift < 0:
+        print("Haha, nice try. No negative numbers allowed!")
+        return char
+
     # Re-index char (unicode)
     c = ((ord(char) - 65) + shift) % 26
     return (chr(c+65))
