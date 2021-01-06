@@ -10,24 +10,6 @@ class SubstitutionTable(dict):
     def reset_table(self):
         for letter in self.alphabet:
             self.__dict__ [letter] = letter 
-        
-    def add_pair(self, p1, p2):
-        p1,p2 = p1.upper(), p2.upper()
-
-        # Remove letters from the table if they already exist
-        if p1 in self.__dict__:
-            pair_del = self.__dict__[p1]
-            del self.__dict__[p1]
-            del self.__dict__[pair_del]
-                    
-        if p2 in self.__dict__:
-            pair_del = self.__dict__[p2]
-            del self.__dict__[p2]
-            del self.__dict__[pair_del]
-
-        # Pair letters
-        self.__dict__[p1] = p2 
-        self.__dict__[p2] = p1
     
     def print_table(self):
         '''
@@ -35,8 +17,38 @@ class SubstitutionTable(dict):
         '''
         print ("Substitution Table")
         print ("---")
-        for key in list(self.__dict__.keys()):
+        for key in self.__dict__.keys():
             print("{} --> {}".format(key, self.__dict__[key]))
+
+    def read_in_table(self, table_file):
+        '''
+        Reads in a table from a file in the format
+        'BACD.....Z'
+        '''
+        with open(table_file, 'r') as fd:
+            table_text = fd.read().replace('\n', '')
+        
+        if len(table_text) != len(self.alphabet):
+            print("Bad table file")
+            return
+        
+        for i in range(0, len(self.alphabet)):
+            self.__dict__[self.alphabet[i]] = table_text[i]
+
+    def inverse_table(self):
+        '''
+        Inverts the current substitution table
+        A -> B becomes B -> A
+        '''
+
+        inverse = []
+        for letter in self.alphabet:
+            target = self.__dict__[letter]
+            inverse.append(target)
+        
+        for i in range(0, len(inverse)):
+            self.__dict__[inverse[i]] = self.alphabet[i]
+
 
 
 def print_puzzle_stats(puzzletext):

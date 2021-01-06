@@ -50,9 +50,10 @@ def encrypt(message, diameter):
 
 
 def solve():
-    ciphertext = read_puzzle()
+    puzzletext = read_puzzle()
 
-    helper.print_puzzle_stats(ciphertext)
+    helper.print_puzzle_stats(puzzletext)
+    
     plaintext = ''
 
 
