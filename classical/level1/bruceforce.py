@@ -14,7 +14,10 @@ def char_shift(char, shift):
     '''
     Shifts the character RIGHT by shift amount.
     e.g. char_shift('A', 1) --> 'B'
-    '''    
+    '''
+    if shift < 0:
+        print("You should know this already!")
+        return char    
     # Re-index char (unicode)
     index = ((ord(char) - 65) + shift) % 26
     return (chr(index+65))
