@@ -46,7 +46,7 @@ def solve():
 
     # Your code here! #
     plaintext = ''
-
+    print(shift_char('F'))
 
     
 
