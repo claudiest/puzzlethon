@@ -1,3 +1,5 @@
+import tools.helper as helper
+
 def read_puzzle():
     '''
     Reads in file from puzzle.txt
@@ -26,6 +28,7 @@ def encrypt(message, key):
     ciphertext = ''
     for character in message:
         ciphertext += char_shift(character, key[ki])
+        # Use the next character in the key
         ki = (ki + 1) % keylength
     
     return ciphertext

@@ -1,3 +1,5 @@
+import tools.helper as helper
+
 def read_puzzle():
     '''
     Reads in file from puzzle.txt
@@ -10,8 +12,8 @@ def read_puzzle():
 
 def add_chars(char1, char2):
     '''
-    Shifts the character RIGHT by shift amount.
-    e.g. char_shift('A', 1) --> 'B'
+    Shifts the first character right by the second character
+    e.g. add_chars('A', 'B') = 'A' + 'B' = 0 + 1 = 1--> 'B' 
     '''    
     # convert characters to integers
     c1 = ord(char1) - 65
@@ -26,7 +28,19 @@ def encrypt(message, key):
     ciphertext = ''
     for character in message:
         ciphertext += char_shift(character, key[ki])
+        # Use the next character in the key
         ki = (ki + 1) % keylength
     
     return ciphertext
 
+def solve():
+    puzzletext = read_puzzle()
+
+    # Your code here! #
+    plaintext = ''
+
+
+    return plaintext
+
+if __name__ == '__main__':
+    print(solve())
