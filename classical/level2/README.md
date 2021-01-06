@@ -47,10 +47,10 @@ for x in xs:
 	# do something to x
 ```
 
-But in the `encrypt` function uses loops like,
+But the `encrypt()` function uses loops like,
 ```
 for i in range(0, len(xs)):
 	#  do something to xs[i]
 ```
 
-*Hint: Does this help you undo the process?*
+*Hint: why is the length of the list, `xs`, important?*
