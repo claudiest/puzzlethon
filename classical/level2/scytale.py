@@ -22,7 +22,7 @@ def encrypt(message, diameter):
     '''
     Encrypts a message on a 'scytale' with a variable diameter
     '''
-    
+
     plaintext = message
     ciphertext = ''
 
