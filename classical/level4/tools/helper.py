@@ -1,15 +1,7 @@
-def score_english(puzzletext, print_score=False):
+def write_line_to_file(line):
     '''
-    This may take an extra second on older machines
+    Writes out any line to scratchpad.txt
     '''
-    count = 0
-    length = len(puzzletext)
-    with open('../dictionary/dictionary.txt') as fd:
-        for line in fd:
-            word = line.strip()
-            count += puzzletext.count(word)
-    
-    if print_score == True:
-        print("Hello")
-    return (count / length)
-
+    with open('scratchpad.txt', 'a') as fd:
+        # Add two newline characters for clarity
+        fd.write(line + '\n' + '\n')
