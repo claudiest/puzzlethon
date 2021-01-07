@@ -10,4 +10,4 @@ To get started,
   git clone https://github.com/aidyp/puzzlethon.git
   ```
 
-* Navigate to the first level, `classical/level0` to get started!
+* Navigate to the first level, `classical/level0`, and get cracking!
