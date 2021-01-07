@@ -30,6 +30,10 @@ When you call this function, the string you pass as a parameter will be written 
 
 
 
+## Extension
+
+See `Extension.md`!
+
 
 
 
