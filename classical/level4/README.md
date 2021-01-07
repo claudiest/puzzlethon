@@ -6,7 +6,7 @@
 
 
 
-You've beaten my Caesar Cipher and you've beaten my Substitution Cipher but can you beat them both at once? 
+Slow down, you crazy child! You've beaten my Caesar Cipher and you've beaten my Substitution Cipher but can you beat them both at once? 
 
 This time, the encryption scheme has two phases. First, the characters are shifted along in a similar manner to `level2/`
 

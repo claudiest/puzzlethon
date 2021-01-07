@@ -34,6 +34,24 @@ class SubstitutionTable(dict):
         for i in range(0, len(self.alphabet)):
             self.__dict__[self.alphabet[i]] = table_text[i]
 
+    def table_from_string(self, table_string):
+        for i in range(0, len(self.alphabet)):
+            self.__dict__[self.alphabet[i]] = table_string[i]
+
+    def inverse_table(self):
+        '''
+        Inverts the current substitution table
+        A -> B becomes B -> A
+        '''
+
+        inverse = []
+        for letter in self.alphabet:
+            target = self.__dict__[letter]
+            inverse.append(target)
+        
+        for i in range(0, len(inverse)):
+            self.__dict__[inverse[i]] = self.alphabet[i]
+
 
 
 def write_line_to_file(line):
