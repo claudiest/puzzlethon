@@ -8,16 +8,7 @@
 
 You've beaten my Caesar Cipher and you've beaten my Substitution Cipher but can you beat them both at once? 
 
-This time, the encryption scheme has two phases. First, the characters are shifted right according to the function `shift_char()`. Here are some examples
-
-```
-A --> A
-B --> C
-C --> E
-D --> G
-E --> I
-F --> K
-```
+This time, the encryption scheme has two phases. First, the characters are shifted along in a similar manner to `level2/`
 
 Then the shifted characters are passed through a substitution table (like in Level 3).
 
@@ -27,7 +18,7 @@ The puzzle,
 PUZZLE
 ```
 
-has been encrypted in this way
+has been encrypted in this way. You've got to decrypt it!
 
 
 

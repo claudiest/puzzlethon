@@ -53,10 +53,6 @@ def solve():
     # Your code here! #
     plaintext = ''   
 
-
-
-
-
     return plaintext
 
 
