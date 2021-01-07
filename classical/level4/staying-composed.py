@@ -51,7 +51,7 @@ def solve():
 
 
     # Your code here! #
-    plaintext = ''   
+    plaintext = ''
 
     return plaintext
 
