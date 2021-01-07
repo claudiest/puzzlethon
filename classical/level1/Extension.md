@@ -30,7 +30,7 @@ To complete this extension you need to:
   		# Your code here! #
   ```
 
-* Use the completed method in `bruceforce.py`
+* Use the completed method to solve the puzzle automatically in `bruceforce.py`
 
   ```python
   def solve():

@@ -10,15 +10,21 @@ def read_puzzle():
     # clean up newlines just in case
     return s.replace('\n', '')
 
-def shift_char(character):
+def char_shift(char, shift):
     '''
-    This one is a little different. (: 
+    Shifts the character RIGHT by shift amount.
+    e.g. char_shift('A', 1) --> 'B'
     '''
-    c = ord(character) - 65
-    r = c + c % 26
-    return (chr(r + 65))
 
-def encrypt(message, substitution_table, shift_key):
+    if shift < 0:
+        print("Haha, nice try. No negative numbers allowed!")
+        return char
+
+    # Re-index char (unicode)
+    c = ((ord(char) - 65) + shift) % 26
+    return (chr(c+65))
+
+def encrypt(message, substitution_table, caesar_key):
     '''
     This will definitely fool them
     '''
@@ -27,7 +33,7 @@ def encrypt(message, substitution_table, shift_key):
         encrypt_character = character
 
         # First scramble the character
-        encrypt_character = shift_key(encrypt_character)
+        encrypt_character = char_shift(encrypt_character, caesar_key)
 
         # Then pass it through the substitution table
         if encrypt_character in substitution_table:
@@ -45,10 +51,7 @@ def solve():
 
 
     # Your code here! #
-    plaintext = ''
-    print(shift_char('F'))
-
-    
+    plaintext = ''   
 
 
 
