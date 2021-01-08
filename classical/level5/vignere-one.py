@@ -20,6 +20,8 @@ def add_chars(char1, char2):
     c2 = ord(char2) - 65
     r = (c1 + c2) % 26
     return (chr(r+65))
+
+
 def encrypt(message, key):
     
     keylength = 4
