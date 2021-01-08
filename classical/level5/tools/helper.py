@@ -6,7 +6,6 @@ def write_line_to_file(line):
         # Add two newline characters for clarity
         fd.write(line + '\n' + '\n')
 
-
 def print_puzzle_stats(puzzletext):
     '''
     Provides stats about the puzzle you may find useful!
