@@ -18,28 +18,26 @@ def add_chars(char1, char2):
     # convert characters to integers
     c1 = ord(char1) - 65
     c2 = ord(char2) - 65
-    r = c1 + c2 % 26
+    r = (c1 + c2) % 26
     return (chr(r+65))
-
 def encrypt(message, key):
     
     keylength = 4
     ki = 0
     ciphertext = ''
     for character in message:
-        ciphertext += char_shift(character, key[ki])
+        ciphertext += add_chars(character, key[ki])
         # Use the next character in the key
         ki = (ki + 1) % keylength
     
     return ciphertext
 
 def solve():
-    ciphertext = read_puzzle()
+    puzzletext = read_puzzle()
 
 
     # Your Code Here! #
     plaintext = ''
-
 
     return plaintext
 
