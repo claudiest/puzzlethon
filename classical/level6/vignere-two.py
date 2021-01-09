@@ -39,7 +39,6 @@ def solve():
     # Your code here! #
     plaintext = ''
 
-
     return plaintext
 
 if __name__ == '__main__':
