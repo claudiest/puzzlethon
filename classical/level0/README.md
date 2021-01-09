@@ -18,14 +18,25 @@ becomes,
 DWWDFNDWGDZQ
 ```
 
-Can you figure out his method? 
+The file, `puzzle.txt` has been encrypted in this way. You have to decrypt it!
 
 
 
 ## Solving
 
+### `solve()`
+
 The file `caesar.py` has the function, `solve()`. Write your code in this function, and then run `caesar.py` and see if you're right!
 
-Once you've figured out the secret, you can quickly write some code to decrypt `puzzle.txt`.
+```python
+def solve():
+	puzzletext = read_puzzle()
+	
+	# Your code goes here! #
+	
+	return plaintext # save your answer in this variable
+```
+
+
 
 *Hint: Can you use the code already present to reverse the operation?*

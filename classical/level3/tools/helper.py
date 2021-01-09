@@ -51,8 +51,20 @@ class SubstitutionTable(dict):
 
 
 
-def print_frequency_table(puzzletext):
-    # Get frequency
+def print_digraph_frequency(puzzletext):
+    '''
+    Write code to consider the frequency of digraphs, e.g "ee, ss", etc.
+    '''
+    
+
+
+def print_puzzle_stats(puzzletext):
+    '''
+    Provides stats about the puzzle you may find useful!
+    '''
+    length = len(puzzletext)
+        # Get frequency
+    freq_dict = {}
     for c in puzzletext: 
         if c in freq_dict:
             freq_dict[c] += 1
@@ -72,20 +84,5 @@ def print_frequency_table(puzzletext):
         print("{} : {}".format(key, freq_dict[key]))
     
     print ("\n")
-
-def print_digraph_frequency(puzzletext):
-    '''
-    Write code to consider the frequency of digraphs, e.g "ee, ss", etc.
-    '''
-    
-
-
-def print_puzzle_stats(puzzletext):
-    '''
-    Provides stats about the puzzle you may find useful!
-    '''
-    freq_dict = {}
-    length = len(puzzletext)
-    print_frequency_table(puzzletext)
 
     
