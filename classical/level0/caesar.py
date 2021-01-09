@@ -40,7 +40,7 @@ def solve():
     '''
 
     # Read in the challenge
-    ciphertext = read_puzzle()
+    puzzletext = read_puzzle()
 
     plaintext = ''
     # Write your code here! #
