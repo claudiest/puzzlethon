@@ -15,7 +15,7 @@ def char_shift(char, shift):
     Shifts the character RIGHT by shift amount.
     e.g. char_shift('A', 1) --> 'B'
     '''
-    if shift < 0:
+    if shift < 15:
         print("You should know this already!")
         return char    
     # Re-index char (unicode)
@@ -43,7 +43,7 @@ def solve():
     puzzletext = read_puzzle()
 
     plaintext = ''
-    # Write your code here! #
+    # COWARDSDIEMANYTIMESBEFORETHEIRDEATHSTHEVALIANTNEVERTASTEOFDEATHBUTONCEOFALLTHEWONDERSTHATIYETHAVEHEARDITSEEMSTOMEMOSTSTRANGETHATMENSHOULDFEARSEEINGTHATDEATHANECESSARYENDWILLCOMEWHENITWILLCOME #
 
     return plaintext
 
